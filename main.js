@@ -39,7 +39,7 @@ form.addEventListener('submit', (e) => {
 
 function fetchWeatherData() {
     //console.log(cityInput);
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + cityInput + '&appid=18332cc2ca6fb7462e1d398a3cc35ac6')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + cityInput + '&appid=18332cc2ca6fb7462e1d398a3cc35ac6')
       .then(response => response.json())
       .then(metadata => {
         fetch('https://api.openweathermap.org/data/2.5/weather?' + 'lat=' + metadata[0].lat + '&lon=' + metadata[0].lon + '&appid=18332cc2ca6fb7462e1d398a3cc35ac6')
